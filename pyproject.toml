@@ -8,6 +8,7 @@ authors = ["Denis Selimovic"]
 python = "^3.9"
 selenium = "^3.141.0"
 click = "^8.0.1"
+unittest = "^0.0"
 
 [tool.poetry.dev-dependencies]
 autopep8 = "pycodestyle"
