@@ -1,7 +1,5 @@
 from abc import abstractmethod
-from typing import List, Protocol
-
-from link_gopher.source.base import Source
+from typing import Iterable, List, Protocol
 
 
 class BaseBrowser(Protocol):
@@ -15,5 +13,5 @@ class BaseBrowser(Protocol):
         raise NotImplementedError()
 
     @abstractmethod
-    def extract(self, source: Source) -> List[str]:
+    def extract(self, urls: Iterable[str]) -> List[str]:
         raise NotImplementedError()
