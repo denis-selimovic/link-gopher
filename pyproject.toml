@@ -12,6 +12,7 @@ click = "^8.0.1"
 [tool.poetry.dev-dependencies]
 autopep8 = "pycodestyle"
 flake8 = "isort"
+pre-commit = "^2.15.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
