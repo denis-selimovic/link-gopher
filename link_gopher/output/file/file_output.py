@@ -7,4 +7,4 @@ class FileOutput:
                 dst: str) -> None:
         with open(dst, 'w+') as file:
             for url, link in entries:
-                file.write(f'{url} -> {link}')
+                file.write(f'{url} -> {link}\n')
