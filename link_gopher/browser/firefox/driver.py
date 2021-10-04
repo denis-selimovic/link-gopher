@@ -30,7 +30,7 @@ class FirefoxBrowser:
             links = list(set(self.__driver.execute_script(script)))
 
             for link in links:
-                yield link
+                yield url, link
 
             time.sleep(1)
 
