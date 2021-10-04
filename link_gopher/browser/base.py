@@ -1,5 +1,5 @@
 from abc import abstractmethod
-from typing import Iterable, List, Protocol
+from typing import Generator, Iterable, Protocol
 
 
 class BaseBrowser(Protocol):
@@ -13,5 +13,5 @@ class BaseBrowser(Protocol):
         raise NotImplementedError()
 
     @abstractmethod
-    def extract(self, urls: Iterable[str]) -> List[str]:
+    def extract(self, urls: Iterable[str]) -> Generator[str, None, None]:
         raise NotImplementedError()
