@@ -5,5 +5,5 @@ from typing import Generator, Protocol
 class Source(Protocol):
 
     @abstractmethod
-    def get_all(self) -> Generator[str, None, None]:
+    def get_all(self, source: str) -> Generator[str, None, None]:
         raise NotImplementedError()
