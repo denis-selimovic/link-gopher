@@ -1,3 +1,4 @@
+import time
 from typing import Generator, Iterable
 
 from link_gopher.browser.base import BaseBrowser
@@ -30,6 +31,8 @@ class FirefoxBrowser:
 
             for link in links:
                 yield link
+
+            time.sleep(1)
 
     def __enter__(self) -> BaseBrowser:
         return self

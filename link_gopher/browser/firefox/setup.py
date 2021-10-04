@@ -22,7 +22,7 @@ def _build_profile() -> FirefoxProfile:
 
 def _build_options() -> FirefoxOptions:
     options = FirefoxOptions()
-    options.headless = True if Config.HEADLESS else False
+    options.headless = True if Config.HEADLESS == "true" else False
     if Config.TRACING:
         options.log.level = "trace"
 
