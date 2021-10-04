@@ -3,7 +3,7 @@ from selenium.webdriver import Firefox, FirefoxOptions, FirefoxProfile
 from link_gopher.config import Config
 
 
-def build_driver():
+def build_driver() -> Firefox:
     profile = _build_profile()
     options = _build_options()
 

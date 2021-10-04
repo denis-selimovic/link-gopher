@@ -1,4 +1,4 @@
-from link_gopher.browser.firefox.profile import build_driver
+from link_gopher.browser.firefox.setup import build_driver
 
 
 class FirefoxBrowser:
@@ -10,4 +10,4 @@ class FirefoxBrowser:
         self.__driver = build_driver()
 
     def close(self) -> None:
-        pass
+        self.__driver.close()
