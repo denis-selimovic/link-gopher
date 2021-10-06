@@ -5,7 +5,7 @@ setup(
     version='0.0.1',
     entry_points={
         'console_scripts': [
-            'link-gopher=link_gopher:link_gopher'
+            'link-gopher=link_gopher.run:link_gopher'
         ]
     }
 )
