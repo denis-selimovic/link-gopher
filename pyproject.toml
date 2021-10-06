@@ -8,7 +8,6 @@ authors = ["Denis Selimovic"]
 python = "^3.9"
 selenium = "^3.141.0"
 click = "^8.0.1"
-unittest = "^0.0"
 python-dotenv = "^0.19.0"
 
 [tool.poetry.dev-dependencies]
@@ -17,5 +16,5 @@ flake8 = "isort"
 pre-commit = "^2.15.0"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["setuptools", "poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

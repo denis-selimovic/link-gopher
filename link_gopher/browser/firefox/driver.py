@@ -24,7 +24,9 @@ class FirefoxBrowser:
             script = """
                 const links = document.querySelectorAll("a").values();
                 const hrefs = [];
-                for (link of links) hrefs.push(link.href);
+                for (link of links) {
+                    if (/^(http|https):\/\//.test(link)) hrefs.push(link.href);
+                }
                 return hrefs;
             """
             links = list(set(self.__driver.execute_script(script)))
