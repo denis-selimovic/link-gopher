@@ -8,3 +8,7 @@ class Output(Protocol):
     def process(self, entires: Generator[Tuple[str, str], None, None],
                 dst: str) -> None:
         raise NotImplementedError()
+
+    @abstractmethod
+    def is_valid(self, dst) -> bool:
+        raise NotImplementedError()

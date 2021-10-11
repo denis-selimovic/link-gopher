@@ -1,13 +1,12 @@
 from typing import Generator, Tuple
 
 
-class FileOutput:
+class InmemoryOutput:
 
     def process(self, entries: Generator[Tuple[str, str], None, None],
                 dst: str) -> None:
-        with open(dst, 'w+') as file:
-            for url, link in entries:
-                file.write(f'{url} -> {link}\n')
+        for url, link in entries:
+            print(f'{url} -> {link}')
 
     def is_valid(self, dst) -> bool:
         return True
