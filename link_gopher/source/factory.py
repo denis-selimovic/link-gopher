@@ -1,10 +1,12 @@
 from link_gopher.source.base import Source
 from link_gopher.source.file.file_source import FileSource
+from link_gopher.source.inmemory.inmemory_source import InmemorySource
 
 
 class SourceFactory:
 
     source_map = {
+        'mem': InmemorySource,
         'txt': FileSource
     }
 
