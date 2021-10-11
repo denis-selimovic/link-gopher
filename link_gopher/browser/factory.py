@@ -1,3 +1,5 @@
+from typing import List
+
 from link_gopher.browser.base import BaseBrowser
 from link_gopher.browser.firefox.driver import FirefoxBrowser
 
@@ -14,3 +16,7 @@ class BrowserFactory:
             return browser()
 
         raise ValueError("Wrong browser type")
+
+    @classmethod
+    def get_keys(cls) -> List[str]:
+        return list(cls.browser_map.keys())

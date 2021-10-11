@@ -1,5 +1,6 @@
 from typing import List
 
+from link_gopher.filters.base import Filter
 from link_gopher.output.base import Output
 from link_gopher.output.file.file_output import FileOutput
 from link_gopher.output.inmemory.inmemory_output import InmemoryOutput
@@ -13,9 +14,9 @@ class OutputFactory:
     }
 
     @classmethod
-    def get(cls, kind: str) -> Output:
+    def get(cls, kind: str, filter: Filter) -> Output:
         if output := cls.output_map.get(kind):
-            return output()
+            return output(filter)
 
         raise ValueError("Wrong type of output")
 

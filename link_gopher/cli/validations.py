@@ -5,7 +5,7 @@ from link_gopher.source.factory import SourceFactory
 
 
 def validate_output(value, out):
-    output = OutputFactory.get(value)
+    output = OutputFactory.get(value, None)
 
     if not output.is_valid(out):
         raise click.BadParameter(
