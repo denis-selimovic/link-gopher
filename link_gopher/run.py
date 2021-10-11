@@ -24,7 +24,7 @@ def link_gopher(self):
               type=click.Choice(OutputFactory.get_keys()))
 @click.option('--in', '-i')
 @click.option('--out', '-o')
-@click.option('--filter-type', '-ft', default='basic',
+@click.option('--filter-type', '-ft',
               type=click.Choice(FilterFactory.get_keys()))
 @click.option('--filter-values', '-fv')
 def run(**kwargs):
@@ -37,7 +37,8 @@ def run(**kwargs):
 
     scraper = Scraper(kwargs['browser'], kwargs['src'], kwargs['dst'],
                       kwargs['filter_type'],
-                      kwargs['filter_values'].split(","))
+                      kwargs['filter_values'].split(",")
+                      if kwargs['filter_type'] else None)
     scraper.load(kwargs.get('in'), kwargs.get('out'))
 
 
