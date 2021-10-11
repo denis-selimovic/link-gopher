@@ -8,3 +8,6 @@ class FileOutput:
         with open(dst, 'w+') as file:
             for url, link in entries:
                 file.write(f'{url} -> {link}\n')
+
+    def is_valid(self, dst) -> bool:
+        return True
