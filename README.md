@@ -6,7 +6,7 @@ Clone of link gopher browser extension written in Python programming language fo
 - [Google Chrome Link Gopher](https://chrome.google.com/webstore/detail/link-gopher/bpjdkodgnbfalgghnbeggfbfjpcfamkf)
 - [Mozzila Firefox Link Gopher](https://addons.mozilla.org/en-US/firefox/addon/link-gopher/)
 
-As part of installation, CLI tool is provided which can be used to fetch all links from webpages without duplicates.
+As part of installation, CLI tool is provided which can be used to fetch all links from webpages without duplicates while also being able to filter them.
 
 ## Installation
 
