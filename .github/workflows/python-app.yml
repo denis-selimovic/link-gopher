@@ -30,9 +30,6 @@ jobs:
     - name: Install dependencies
       run: |
         poetry install
-    - name: Activate virtual env
-      run: |
-        poetry shell
     - name: Run tests
       run: |
-        python -m unittest -v -c
+        python -m poetry run unittest -v -c
