@@ -43,10 +43,6 @@ class OutputFactoryTests(TestCase):
 
 class BrowserFactoryTests(TestCase):
 
-    def test_factory_firefox(self):
-        browser = BrowserFactory.get('firefox')
-        self.assertIs(type(browser), FirefoxBrowser)
-
     def test_factory_exception_raised(self):
         self.assertRaises(ValueError, lambda: BrowserFactory.get('unknown'))
 
